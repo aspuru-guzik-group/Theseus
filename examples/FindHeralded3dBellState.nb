@@ -1,13 +1,19 @@
+
 (*
     Conceptual understanding through efficient inverse-design of quantum optical experiments
-
+    
     Example: Heralded 3-dimensional Bell state
 
     Mario Krenn (mario.krenn@utoronto.ca), Jakob Kottmann, Nora Tischler, Alán Aspuru-Guzik (alan@aspuru.com)
     https://arxiv.org/abs/2005.06443
     mariokrenn.wordpress.com/ https://www.matter.toronto.edu/
 
-    We show an example of Theseus, a highly-efficient inverse-design algorithm for quantum optical experiments. In this example, we let Theseus find experimental setups a heralded, 3-dimensional Bell state in path a,b -- using six ancilla photons. The result is a graph which can be translated into several different schemes of quantum optics. Here, we dont use topological optimization -- see other examples for that. For more infos, see paper.
+    We show an example of Theseus, a highly-efficient inverse-design algorithm for quantum optical experiments.
+    In thisexample, we let Theseus find experimental setups a heralded, 3-dimensional Bell state in path a,b --
+    using six ancilla photons. The result is a graph which can be translated into several different schemes of
+    quantum optics. Here, we dont use topological optimization -- see other examples for that.
+    For more infos, see paper.
+    
     Theseus will write a report into a log-file and in the mathematica notebook.
 
 *)
@@ -57,12 +63,12 @@ FullState=Expand[(AllEdgesSum+DoublePaths/2+TriplePaths/6+QuadPaths/24)*v[0]]; P
 
 
 (*Condition on a click in the heralding detectors*)
-TriggerableStateC=Expand[FullState*ZEROc]/.{ZEROc*c[0]*v[0]->v[0],ZEROc*c[0]^n_*v[0]->c[0]^(n-1)*v[0]}/.{ZEROc->0};PrintLog["Detector C heralded"]
-TriggerableStateD=Expand[TriggerableStateC*ZEROd]/.{ZEROd*d[0]*v[0]->v[0],ZEROd*d[0]^n_*v[0]->d[0]^(n-1)*v[0]}/.{ZEROd->0};PrintLog["Detector D heralded"]
-TriggerableStateE=Expand[TriggerableStateD*ZEROe]/.{ZEROe*e[0]*v[0]->v[0],ZEROe*e[0]^n_*v[0]->e[0]^(n-1)*v[0]}/.{ZEROe->0};PrintLog["Detector E heralded"]
-TriggerableStateF=Expand[TriggerableStateE*ZEROf]/.{ZEROf*f[0]*v[0]->v[0],ZEROf*f[0]^n_*v[0]->f[0]^(n-1)*v[0]}/.{ZEROf->0};PrintLog["Detector F heralded"]
-TriggerableStateG=Expand[TriggerableStateF*ZEROg]/.{ZEROg*g[0]*v[0]->v[0],ZEROg*g[0]^n_*v[0]->g[0]^(n-1)*v[0]}/.{ZEROg->0};PrintLog["Detector G heralded"]
-TriggerableStateH=Expand[TriggerableStateG*ZEROh]/.{ZEROh*h[0]*v[0]->v[0],ZEROh*h[0]^n_*v[0]->h[0]^(n-1)*v[0]}/.{ZEROh->0};PrintLog["Detector H heralded"]
+TriggerableStateC=Expand[FullState*ZEROc]/.{ZEROc*c[0]*v[0]->v[0],ZEROc*c[0]^n_*v[0]->c[0]^(n-1)*v[0]}/.{ZEROc->0}; PrintLog["Detector C heralded"]
+TriggerableStateD=Expand[TriggerableStateC*ZEROd]/.{ZEROd*d[0]*v[0]->v[0],ZEROd*d[0]^n_*v[0]->d[0]^(n-1)*v[0]}/.{ZEROd->0}; PrintLog["Detector D heralded"]
+TriggerableStateE=Expand[TriggerableStateD*ZEROe]/.{ZEROe*e[0]*v[0]->v[0],ZEROe*e[0]^n_*v[0]->e[0]^(n-1)*v[0]}/.{ZEROe->0}; PrintLog["Detector E heralded"]
+TriggerableStateF=Expand[TriggerableStateE*ZEROf]/.{ZEROf*f[0]*v[0]->v[0],ZEROf*f[0]^n_*v[0]->f[0]^(n-1)*v[0]}/.{ZEROf->0}; PrintLog["Detector F heralded"]
+TriggerableStateG=Expand[TriggerableStateF*ZEROg]/.{ZEROg*g[0]*v[0]->v[0],ZEROg*g[0]^n_*v[0]->g[0]^(n-1)*v[0]}/.{ZEROg->0}; PrintLog["Detector G heralded"]
+TriggerableStateH=Expand[TriggerableStateG*ZEROh]/.{ZEROh*h[0]*v[0]->v[0],ZEROh*h[0]^n_*v[0]->h[0]^(n-1)*v[0]}/.{ZEROh->0}; PrintLog["Detector H heralded"]
 TriggerableState=TriggerableStateH;
 
 
@@ -163,6 +169,3 @@ While[NumOfRepeat>0,
 
 PrintLog["Time: "<>ToString[AbsoluteTime[]-StartTime]<>" sec."];
 PrintLog["Final: "<>ToString[LenOfVariables-Length[ZeroList]]<>"/"<>ToString[LenOfVariables]<>" variables."];
-
-
-
