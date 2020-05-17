@@ -1,42 +1,34 @@
-PrintLog[str_] := (
-   Print[str];
-   
-   (* log-file *)
-   CurrentFileName = 
-    NotebookDirectory[] <> "FindHeralded3dimBell_Log.txt"; 
-   hFile = OpenAppend[CurrentFileName];
-   WriteString[hFile, str <> "\n"];
-   Close[hFile];
-   );
+PrintLog[str_]:=(
+  Print[str];
+
+  (* log-file *)
+  CurrentFileName=NotebookDirectory[]<>"FindHeralded3dimBell_Log.txt"; 
+  hFile=OpenAppend[CurrentFileName];
+  WriteString[hFile,str<>"\n"];
+  Close[hFile];
+);
 
 
-PossibleComb = Subsets[Range[8], {2}];
-PosCombABCD[n_] := 
- PossibleComb[[n]] /. {1 -> a, 2 -> b, 3 -> c, 4 -> d, 5 -> e, 6 -> f,
-    7 -> g, 8 -> h}
+PossibleComb=Subsets[Range[8],{2}];
+PosCombABCD[n_]:=PossibleComb[[n]]/.{1->a,2->b,3->c,4->d,5->e,6->f,7->g,8->h}
 
 (*build Graph *)
-AllPaths = {};
-For[ii = 1, ii <= Length[PossibleComb], ii++,
-  For[d1 = 0, d1 <= 2, d1++,
-    For[d2 = 0, d2 <= 2, d2++,
-      AppendTo[AllPaths, 
-        PosCombABCD[ii][[1]][d1]*PosCombABCD[ii][[2]][d2]];
-      ];
+AllPaths={};
+For[ii=1,ii<=Length[PossibleComb],ii++,
+  For[d1=0,d1<=2,d1++,
+    For[d2=0,d2<=2,d2++,
+      AppendTo[AllPaths,PosCombABCD[ii][[1]][d1]*PosCombABCD[ii][[2]][d2]];
     ];
   ];
+];
 
-(*vertices c,d,e,f,g,h only need one mode number, as they are the \
-heralding detectors*)
-AllPaths = 
-  DeleteDuplicates[
-   AllPaths /. {c[_] -> c[0], d[_] -> d[0], e[_] -> e[0], 
-     f[_] -> f[0], g[_] -> g[0], h[_] -> h[0]}];
+(*vertices c,d,e,f,g,h only need one mode number, as they are the heralding detectors*)
+AllPaths=DeleteDuplicates[AllPaths/.{c[_]->c[0],d[_]->d[0],e[_]->e[0],f[_]->f[0],g[_]->g[0],h[_]->h[0]}];
 
 (*give weights to edges*)
-AllPathsWeighted = {};
-VarList = {};
-For[ii = 1, ii <= Length[AllPaths], ii++,
-  AppendTo[AllPathsWeighted, ww[ii]*AllPaths[[ii]]];
-  AppendTo[VarList, ww[ii]];
-  ];
+AllPathsWeighted={};
+VarList={};
+For[ii=1,ii<=Length[AllPaths],ii++,
+  AppendTo[AllPathsWeighted,ww[ii]*AllPaths[[ii]]];
+  AppendTo[VarList,ww[ii]];
+];
