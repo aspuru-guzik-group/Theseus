@@ -10,10 +10,10 @@ The code is written in Mathematica, because operations on the graph are performe
 ![Image of Theseus](https://github.com/aspuru-guzik-group/Theseus/blob/master/algo.png)
 
 ## Examples
-We provide a number of examples, both for the discovery of new quantum experiments -- using post-selected, non-postselected state generation and quantum transformation.
 <p align="right">
-  <img src="topologicalOptimize.png" align="right" width="500px"/>
+  <img src="topologicalOptimize.png" align="right" width="600px"/>
 </p>
+We provide a number of examples, both for the discovery of new quantum experiments -- using post-selected, non-postselected state generation and quantum transformation.
 
 
 * [Post-selected high-dimensional three-photon entanglement](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindSRVStates.m): Discovery of maximally entangled Schmidt-Rank Vector states.
