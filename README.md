@@ -11,18 +11,18 @@ The code is written in Mathematica, because operations on the graph are performe
 
 ## Examples
 <p align="right">
-  <img src="topologicalOptimize.png" align="right" width="600px"/>
+  <img src="topologicalOptimize.png" align="right" width="450px"/>
 </p>
 We provide a number of examples, both for the discovery of new quantum experiments -- using post-selected, non-postselected state generation and quantum transformation.
 
 
-* [Post-selected high-dimensional three-photon entanglement](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindSRVStates.m): Discovery of maximally entangled Schmidt-Rank Vector states.
+* [**Post-selected high-dimensional three-photon entanglement**](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindSRVStates.m): Discovery of maximally entangled Schmidt-Rank Vector states.
 
-* [Heralded three-dimensional Bell State](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindHeralded3dBellState.m): Discovery of heralded Bell states, goes beyond of post-selection.
+* [**Heralded three-dimensional Bell State**](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindHeralded3dBellState.m): Discovery of heralded Bell states, goes beyond of post-selection.
 
-* [Two-qubit CNOT gate](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/Find2dCNOT.m): Discovery of photon-photon CNOT gates. Introduction of virtual vertices.
+* [**Two-qubit CNOT gate**](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/Find2dCNOT.m): Discovery of photon-photon CNOT gates. Introduction of virtual vertices.
 
-* [Translation of Quantum Experiment to Graph](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/TranslateExperimentToGraph.m): Transforming an quantum optical setup (a photonic CNOT by Gasparoni et al., PRL 93, 020504 (2014)) in an automated way to graphs.
+* [**Translation of Quantum Experiment to Graph**](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/TranslateExperimentToGraph.m): Transforming an quantum optical setup (a photonic CNOT by Gasparoni et al., PRL 93, 020504 (2014)) in an automated way to graphs.
 
 You can download all examples as standard [Mathematica notebooks](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/QuantumTheseus_20200517.zip).
 
