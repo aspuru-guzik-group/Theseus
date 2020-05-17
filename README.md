@@ -16,8 +16,7 @@ We provide a number of examples, both for the discovery of new quantum experimen
 
 * [Heralded three-dimensional Bell State](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindHeralded3dBellState.m): Discovery of heralded Bell states, goes beyond of post-selection.
 
-
 * [Two-qubit CNOT gate](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/Find2dCNOT.m): Discovery of photon-photon CNOT gates. Introduction of virtual vertices.
 
-
+You can download all examples as standard [Mathematica notebooks.](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/QuantumTheseus_20200517.zip).
 
