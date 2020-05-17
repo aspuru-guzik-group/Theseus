@@ -11,7 +11,7 @@ The code is written in Mathematica, because operations on the graph are performe
 
 ## Examples
 We provide a number of examples, both for the discovery of new quantum experiments -- using post-selected, non-postselected state generation and quantum transformation.
-<img src="topologicalOptimize.png" alt="topological optimization" style="width:200px;"/>
+<img src="topologicalOptimize.png" alt="drawing" width="200"/>
 * [Post-selected high-dimensional three-photon entanglement](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindSRVStates.m): Discovery of maximally entangled Schmidt-Rank Vector states.
 
 * [Heralded three-dimensional Bell State](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindHeralded3dBellState.m): Discovery of heralded Bell states, goes beyond of post-selection.
