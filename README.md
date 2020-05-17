@@ -12,15 +12,12 @@ The code is written in Mathematica, because operations on the graph are performe
 ## Examples
 We provide a number of examples, both for the discovery of new quantum experiments -- using post-selected, non-postselected state generation and quantum transformation.
 
-#### [Post-selected high-dimensional three-photon entanglement](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindSRVStates.m)
-Discovery of maximally entangled Schmidt-Rank Vector states, from [Phys. Rev. Lett. 110, 030501](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.030501).
+* [Post-selected high-dimensional three-photon entanglement](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindSRVStates.m): Discovery of maximally entangled Schmidt-Rank Vector states, from [Phys. Rev. Lett. 110, 030501](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.030501).
 
-#### [Heralded three-dimensional Bell State](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindHeralded3dBellState.m)
-Discovery of heralded Bell states, goes beyond of post-selection.
+* [Heralded three-dimensional Bell State](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/FindHeralded3dBellState.m): Discovery of heralded Bell states, goes beyond of post-selection.
 
 
-#### [Two-qubit CNOT gate](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/Find2dCNOT.m)
-Discovery of photon-photon CNOT gates. Introduction of virtual vertices.
+* [Two-qubit CNOT gate](https://github.com/aspuru-guzik-group/Theseus/blob/master/examples/Find2dCNOT.m): Discovery of photon-photon CNOT gates. Introduction of virtual vertices.
 
 
 
