@@ -1,5 +1,5 @@
 # Conceptual understanding through efficient inverse-design of quantum optical experiments
-### Code for the paper: https://arxiv.org/abs/2005.06443
+### Code for the paper: https://arxiv.org/abs/2005.06443 (in press: [Physical Review X](https://journals.aps.org/prx/accepted/be07cKc9L7713603f5f0425899b93568a93da44b9) )
 ### Mario Krenn, Jakob Kottmann, Nora Tischler, Alán Aspuru-Guzik
 #### contact: mario.krenn@utoronto.ca and alan@aspuru.com
 
